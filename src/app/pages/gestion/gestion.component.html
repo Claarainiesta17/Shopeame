@@ -1,0 +1,23 @@
+<h2>Creación/edición de productos</h2>
+<div class="form">
+<form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+  <p>Nombre del producto:</p>
+  <input placeholder="Por ej: Tiesto para planta" type="title" formControlName="name"/>
+  <app-form-error *ngIf="submitted" [errors]="contactForm.controls['name'].errors"></app-form-error>
+  <p>Precio:</p>
+  <input placeholder="Por ej: 9.50" type="prize" formControlName="precio"/>
+  <app-form-error *ngIf="submitted" [errors]="contactForm.controls['precio'].errors"></app-form-error>
+  <p>Descripción:</p>
+  <input placeholder="Por ej: Lo más vendido este mes" type="description" formControlName="descripcion"/>
+  <app-form-error *ngIf="submitted" [errors]="contactForm.controls['description'].errors"></app-form-error>
+  <p>Ruta de la imagen:</p>
+  <input placeholder="Por ej: http://blabla.com/img.jpg" type="URL" formControlName="imagen"/>
+  <app-form-error *ngIf="submitted" [errors]="contactForm.controls['imagen'].errors"></app-form-error>
+  <p>Opiniones:</p>
+  <input placeholder="Por ej: 4.8" type="writting" formControlName="opiniones"/>
+  <app-form-error *ngIf="submitted" [errors]="contactForm.controls['opinions'].errors"></app-form-error>
+  <div>
+  <button type="submit">Guardar</button>
+  </div>
+</form>
+</div>

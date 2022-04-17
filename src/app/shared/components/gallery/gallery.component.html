@@ -1,0 +1,13 @@
+<section class="contenedor">
+  <article class="galeria">
+  <figure *ngFor="let producto of productos" class="galeria__items">
+      <img [routerLink]="['/productos', producto.id]" src="{{producto.image}}"/>
+
+      <h3>{{producto.name}}</h3>
+      <p>{{producto.description}}</p>
+      <h2> {{producto.price}} €</h2>
+      <p>⭐⭐⭐⭐{{ producto.stars}} <button>Editar</button></p>
+
+  </figure>
+  </article>
+  </section>
